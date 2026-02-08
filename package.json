@@ -1,0 +1,64 @@
+{
+  "name": "godot-compute-shader-linter",
+  "displayName": "godot compute shader linter",
+  "description": "Linter for godot compute shader",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:glsl"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "godot-compute-shader-linter.helloWorld",
+      "title": "Hello World"
+    }],
+    "configuration": {
+      "title": "Godot Compute Shader Linter",
+      "properties": {
+        "godot-compute-shader-linter.validatorPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the glslangValidator executable. If not set, will use 'bin/glslangValidator.exe' on Windows or 'bin/glslangValidator' on Linux/macOS automatically."
+        },
+        "godot-compute-shader-linter.validatorArgs": {
+          "type": "array",
+          "default": [],
+          "description": "Additional arguments to pass to the validator",
+          "items": {
+            "type": "string"
+          }
+        },
+        "godot-compute-shader-linter.fileExtensions": {
+          "type": "object",
+          "default": {
+            ".comp.glsl": "comp"
+          },
+          "description": "Map file extensions to shader stages. If empty or not configured, will use '.comp.glsl' -> 'comp' by default.",
+          "additionalProperties": {
+            "type": "string",
+            "enum": ["vert", "frag", "comp", "geom", "tesc", "tese"]
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.109.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.39.2",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}

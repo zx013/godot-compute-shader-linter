@@ -1,0 +1,21 @@
+{
+  // 调试配置
+  // validatorPath 可以留空，系统会自动使用 bin/glslangValidator
+  // 如果需要自定义路径，可以取消注释并设置：
+  // "godot-compute-shader-linter.validatorPath": "bin/glslangValidator",
+  "godot-compute-shader-linter.validatorPath": "",
+  
+  "godot-compute-shader-linter.validatorArgs": [],
+  
+  // fileExtensions 可以留空，系统会默认使用 { ".comp.glsl": "comp" }
+  // 如果需要支持其他着色器类型，可以取消注释并配置：
+  // "godot-compute-shader-linter.fileExtensions": {
+  //   ".vert.glsl": "vert",
+  //   ".vert": "vert",
+  //   ".frag.glsl": "frag",
+  //   ".frag": "frag",
+  //   ".comp.glsl": "comp",
+  //   ".comp": "comp"
+  // }
+  "godot-compute-shader-linter.fileExtensions": {}
+}

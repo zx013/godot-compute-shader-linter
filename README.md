@@ -12,27 +12,8 @@
 
 ## 安装要求
 
-在使用此扩展之前，您需要安装 [glslangValidator](https://github.com/KhronosGroup/glslang)：
-
-### Windows
-
-1. 从 [glslang GitHub Releases](https://github.com/KhronosGroup/glslang/releases) 下载最新版本的 Windows 二进制文件
-2. 解压文件
-3. 将 `glslangValidator.exe` 所在的路径添加到系统 PATH 环境变量中，或者记下完整路径用于配置
-
-### macOS
-
-```bash
-brew install glslang
-```
-
-### Linux
-
-```bash
-sudo apt-get install glslang-tools
-# 或者
-sudo yum install glslang-tools
-```
+此扩展包含了 `glslangValidator` 二进制文件，无需额外安装。
+如需最新的 `glslangValidator` 二进制文件，请从 [glslang GitHub Releases](https://github.com/KhronosGroup/glslang/releases) 下载，并配置到扩展中。 
 
 ## 配置
 

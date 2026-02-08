@@ -3,6 +3,11 @@
   "displayName": "godot compute shader linter",
   "description": "Linter for godot compute shader",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/godot-compute-shader-linter"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.109.0"
   },
